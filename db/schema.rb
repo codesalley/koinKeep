@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_24_074843) do
+ActiveRecord::Schema.define(version: 2021_03_24_074543) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,8 +50,6 @@ ActiveRecord::Schema.define(version: 2021_03_24_074843) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
-    t.bigint "transaction_id", null: false
-    t.index ["transaction_id"], name: "index_groups_on_transaction_id"
     t.index ["user_id"], name: "index_groups_on_user_id"
   end
 
@@ -80,7 +78,6 @@ ActiveRecord::Schema.define(version: 2021_03_24_074843) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "groups", "transactions"
   add_foreign_key "groups", "users"
   add_foreign_key "transactions", "users"
 end

@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   has_many :transactions, class_name: "Transaction"
   has_many :groups, class_name: "Group"
+  has_one_attached :avatar
 end
