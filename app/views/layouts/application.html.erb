@@ -10,7 +10,9 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="h-screen">
+    <%= render partial: 'shared/navbar' %>
+    <%= render partial: 'shared/flash' %>
     <%= yield %>
   </body>
 </html>

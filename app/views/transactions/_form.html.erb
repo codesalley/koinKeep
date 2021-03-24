@@ -1,0 +1,15 @@
+<div class="new-transaction">
+    <%= form_with model: transaction do |form|  %>
+    <div class="mb-3">
+        <%= form.label :name, "Transaction Name" %>
+        <%= form.text_field :name  %>
+    </div>
+    <div class="mb-3">
+        <%= form.label :amount, "Amount" %>
+        <%= form.text_field :amount %>
+    </div>
+    <div class="mb-3">
+        <%= form.submit 'Add Transaction' %>
+    </div>
+    <% end %>
+</div>

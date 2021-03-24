@@ -1,0 +1,12 @@
+<div class="all-groups">
+  <% @groups.each do |itm| %>
+  <%= link_to do %>
+  <div class="card">
+    <%= image_tag(itm.icon) %> 
+     <%= itm.name %>
+  </div>
+
+    
+  <% end %>
+  <% end %>
+</div>

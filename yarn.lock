@@ -6554,6 +6554,11 @@ svgo@^1.0.0:
     unquote "~1.1.1"
     util.promisify "~1.0.0"
 
+tailwind-hamburgers@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/tailwind-hamburgers/-/tailwind-hamburgers-1.0.2.tgz#b70e1372e9fa348c0e7dee100456dbbb863fd15f"
+  integrity sha512-TPDEslkYHbsELXHeKblaQUtxWXHRo5t8/Gh/aFK4IKOWUSsoqBcV6ojYsUTY4jMgRJFmhHyqjW2UfJhR2Ugxyw==
+
 tailwindcss@^2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-2.0.4.tgz#cf13e62738c3a27065664e449d93b66ee2945506"

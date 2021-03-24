@@ -1,0 +1,15 @@
+<div class="new-group">
+    <%= form_with model: group do |form|  %>
+    <div class="mb-3">
+        <%= form.label :name, "group Name" %>
+        <%= form.text_field :name  %>
+    </div>
+    <div class="mb-3">
+        <%= form.label :icon, "Group Icon" %>
+        <%= form.file_field :icon %>
+    </div>
+    <div class="mb-3">
+        <%= form.submit 'Create Group' %>
+    </div>
+    <% end %>
+</div>
