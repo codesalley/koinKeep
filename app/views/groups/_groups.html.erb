@@ -1,12 +1,17 @@
-<div class="all-groups">
-  <% @groups.each do |itm| %>
-  <%= link_to do %>
-  <div class="card">
-    <%= image_tag(itm.icon) %> 
-     <%= itm.name %>
-  </div>
+<div class="p-2 text-gray-600 bg-green-100 heading flex flex-row justify-evenly ">
+  <h2 class="text-center font-bold">All Groups</h2>
 
-    
-  <% end %>
-  <% end %>
+</div>
+<div class="all-groups overflow-scroll">
+
+  <% @groups.each do |itm| %> <%= link_to group_path(itm) do %>
+  <div class="card flex flex-row border p-1 m-5 shadow-md content-center items-center">
+
+    <%= set_icon(itm) %>
+    <div class="info flex justify-around  gap-2 flex-col">
+      <p class="font-bold" ><%= itm.name.upcase %></p>
+      <p><%= itm.created_at %></p>
+    </div>
+  </div>
+  <% end %> <% end %>
 </div>

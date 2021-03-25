@@ -1,0 +1,14 @@
+<div class="external-transactions flex flex-col">
+  <div
+    class="p-2 text-gray-600 bg-green-100 heading flex flex-row justify-evenly"
+  >
+    <h2 class="text-center p-2 text-gray-600 bg-green-100 font-black leading-9">
+      My External Transactions
+    </h2>
+    <h2 class="text-center font-bold self-center">
+      Total: $ <%= @external_total %> USD
+    </h2>
+</div>
+<%= render 'shared/transactions', transactions: @external_transactions %>
+</div>
+<%= link_to 'Add new', new_transaction_path, class: ' p-3 text-gray-500 bottom-5 rounded-3xl right-5 fixed bg-green-100' %>

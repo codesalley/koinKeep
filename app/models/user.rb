@@ -7,4 +7,6 @@ class User < ApplicationRecord
   has_many :groups, class_name: :Group, dependent: :destroy
   has_many :transactions, class_name: :Transaction, dependent: :destroy
   has_one_attached :avatar
+
+
 end

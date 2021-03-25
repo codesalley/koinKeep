@@ -1,0 +1,15 @@
+<div class="new-transaction">
+    <%= form_for transaction, url: group_transactions_path(group_id: params[:id], user_id: current_user.id) do |form|  %>
+    <div class="mb-3">
+        <%= form.label :name, "Transaction Name" %>
+        <%= form.text_field :name  %>
+    </div>
+    <div class="mb-3">
+        <%= form.label :amount, "Amount" %>
+        <%= form.text_field :amount %>
+    </div>
+    <div class="mb-3">
+        <%= form.submit 'Add Transaction' %>
+    </div>
+    <% end %>
+</div>

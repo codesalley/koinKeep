@@ -1,0 +1,12 @@
+<div class="transacrion-list">
+    <% transactions.each do |t| %>
+    <div class="card flex flex-row p-1 content-center items-center gap-10  border shadow-md rounded m-5">
+        <%= image_tag(t.group.icon, class: 'w-1/5') %>
+        <div class="info ">
+           <p class="font-bold"> <%= t.name.upcase %></p>
+           <p >Total: $  <%= t.amount %> USD</p> 
+            <%= t.created_at %>
+        </div>
+    </div>            
+    <% end %>
+</div>

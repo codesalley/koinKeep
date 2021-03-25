@@ -1,0 +1,8 @@
+<div class="group-main">
+    <h2 class="text-center p-2 text-gray-600 bg-green-100 font-black leading-9" ><%= @group.name.upcase%></h2>
+    <%= render 'transactions', group: @group %>
+
+    <div class="add-transaction">
+        <%= link_to 'create group transaction',   new_group_transaction_path(id: @group), class: ' p-3 text-gray-500 bottom-5 rounded-3xl right-5 fixed bg-green-100' %>
+    </div>
+</div>

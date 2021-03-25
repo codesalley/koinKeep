@@ -1,0 +1,17 @@
+<div class="transactions">
+  
+   <div class="transacrion-list overflow-scroll">
+    <% group.transactions.each do |t| %>
+    <div class="card relative flex flex-row p-1 content-center items-center gap-10  border shadow-md rounded m-5">
+       
+        <%= set_icon(t.group) %>
+        <div class="info ">
+           <p class="font-bold"> <%= t.name.upcase %></p>
+           <p >Total: $  <%= t.amount %> USD</p> 
+            <%= t.created_at %>
+        </div>
+        <p class="self-start absolute italic text-gray-400 right-5"><%= t.user.name.capitalize %></p>
+    </div>            
+    <% end %>
+</div>
+</div>
