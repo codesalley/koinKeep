@@ -1,8 +1,8 @@
-<div class="transactions">
+<div class="transactions lg:container mx-auto">
   
-   <div class="transacrion-list overflow-scroll">
+   <div class="transacrion-list overflow-scroll md:grid md:grid-cols-3">
     <% group.transactions.each do |t| %>
-    <div class="card relative flex flex-row p-1 content-center items-center gap-10  border shadow-md rounded m-5">
+    <div class="card relative flex flex-row p-1 content-center items-center gap-10  md:gap-2 border shadow-md rounded m-5  md:p-1 hover:scale-105 transform  duration-700 hover:shadow-xl">
 
         <%= delete_transaction(t) %>
         <%= set_icon(t.group) %>
