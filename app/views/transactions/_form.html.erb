@@ -6,7 +6,7 @@
     </div>
     <div class="mb-3 flex flex-col">
         <%= form.label :amount, "Amount " %>
-        <%= form.text_field :amount, class: 'amount border-2 border-green-200 rounded focus:border-green-500 ' %>
+        <%= form.number_field :amount, class: 'amount border-2 border-green-200 rounded focus:border-green-500 ' %>
     </div>
     <div class="mb-3 flex flex-col">
         <%= form.submit 'Add Transaction' ,  class: 'p-2 rounded bg-green-100 text-gray-500'%>
