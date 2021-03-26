@@ -1,6 +1,7 @@
 require 'rails_helper'
-
+# rubocop:disable Metrics/BlockLength
 RSpec.feature 'Groups', type: :feature do
+  # rubocop:enable Metrics/BlockLength
   fixtures :users
   fixtures :groups
   setup do
