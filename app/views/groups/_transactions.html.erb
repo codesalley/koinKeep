@@ -9,7 +9,7 @@
         <div class="info ">
            <p class="font-bold"> <%= t.name.upcase %></p>
            <p >Total: $  <%= t.amount %> USD</p> 
-            <%= t.created_at %>
+            <%= date_formatter(t.created_at) %>
         </div>
         <p class="self-start absolute italic text-gray-400 right-5"><%= t.user.name.capitalize %></p>
     </div>            

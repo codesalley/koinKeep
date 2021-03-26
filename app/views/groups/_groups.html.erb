@@ -10,7 +10,7 @@
     <%= check_icon(itm) %>
     <div class="info flex justify-around  gap-2 flex-col">
       <p class="font-bold" ><%= itm.name.upcase %></p>
-      <p><%= itm.created_at %></p>
+      <p><%= date_formatter(itm.created_at) %></p>
     </div>
   </div>
   <% end %> <% end %>
