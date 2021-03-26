@@ -5,7 +5,10 @@
         <div class="info ">
            <p class="font-bold"> <%= t.name.upcase %></p>
            <p >Total: $  <%= t.amount %> USD</p> 
-            <%= t.created_at %>
+           <p class=" text-xs italic text-gray-400">
+
+               <%= date_formatter(t.created_at)  %>
+           </p>
         </div>
     </div>            
     <% end %>

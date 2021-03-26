@@ -4,15 +4,13 @@ module ApplicationHelper
         render 'transactions', group: data 
     end
     def show_chart
-        if Transaction.count < 1
-            "<p class='text-center'> No Data</p>".html_safe
+        if Transaction.count < 1 || Group.count < 1
+            "<p class='text-center font-bold text-gray-500 md:p-5'> No Group Data To Display Chart</p>".html_safe
         else
             @new_hash = []
             Group.all.each  do|itm| 
-                @new_hash << [itm['name'] , itm.transactions.count]
-          
-            end
-            
+                @new_hash << [itm['name'] , itm.transactions.count] 
+            end      
             pie_chart  @new_hash
         end
     end
@@ -41,6 +39,12 @@ module ApplicationHelper
         end
     end
 
+    def date_formatter(date)
+        return unless date 
+
+       return date.to_formatted_s(:long_ordinal)
+    end
+
     def set_avatar(user)
         if user.icon.attached? 
             user.icon
@@ -49,10 +53,10 @@ module ApplicationHelper
         end
     end
     def set_icon(group)
-        if group.icon.attached? 
-            image_tag(group.icon, class: 'w-1/5 md:w-2/6') 
-        else
+        if group.nil? || !group.icon.attached?
             image_tag('icon.png', class: 'w-1/5 md:w-2/6') 
+        else
+            image_tag(group.icon, class: 'w-1/5 md:w-2/6') 
             
         end
     end
