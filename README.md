@@ -6,6 +6,7 @@
 
 - Ruby v3.0.0
 - Ruby on Rails v6.1.3
+- Tailwindcss 2.0
 
 ## Live Demo
 
