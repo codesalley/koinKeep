@@ -3,7 +3,8 @@
    <div class="transacrion-list overflow-scroll">
     <% group.transactions.each do |t| %>
     <div class="card relative flex flex-row p-1 content-center items-center gap-10  border shadow-md rounded m-5">
-       
+
+        <%= delete_transaction(t) %>
         <%= set_icon(t.group) %>
         <div class="info ">
            <p class="font-bold"> <%= t.name.upcase %></p>

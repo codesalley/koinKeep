@@ -1,0 +1,27 @@
+non_gorup1:
+  id: 1
+  name: Gob3
+  amount: 202
+  user_id: 1
+
+non_gorup2:
+  id: 2
+  name: Tz
+  amount: 203
+  user_id: 1
+ 
+gorup1:
+  id: 3
+  name: kk
+  amount: 23
+  user_id: 1
+  group_id: 2
+
+gorup2:
+  id: 4
+  name: tp
+  amount: 2
+  user_id: 1
+  group_id: 2
+
+

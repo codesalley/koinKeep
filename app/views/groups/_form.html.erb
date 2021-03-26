@@ -1,15 +1,15 @@
 <div class="new-group">
     <%= form_with model: group do |form|  %>
-    <div class="mb-3">
-        <%= form.label :name, "group Name" %>
-        <%= form.text_field :name  %>
+    <div class="mb-3 flex flex-col">
+        <%= form.label :name, "Group Name" %>
+        <%= form.text_field :name, class: 'border-2 border-green-200 rounded focus:border-green-500 ' %>
     </div>
-    <div class="mb-3">
+    <div class="mb-3 flex flex-col">
         <%= form.label :icon, "Group Icon" %>
-        <%= form.file_field :icon %>
+        <%= form.file_field :icon , class: 'rounded '%>
     </div>
-    <div class="mb-3">
-        <%= form.submit 'Create Group' %>
+    <div class="mb-3 flex flex-col">
+        <%= form.submit 'Create Group', class: 'p-2 rounded bg-green-100 text-gray-500'%>
     </div>
     <% end %>
 </div>

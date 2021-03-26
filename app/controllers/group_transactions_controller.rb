@@ -8,13 +8,23 @@ class GroupTransactionsController < ApplicationController
     def create 
         group = Group.find_by(id: params[:group_id])
         if group
-            group_trans = group.transactions.build(name: params[:transaction][:name], amount: params[:transaction][:amount] , user_id: params[:user_id])
-            group_trans.is_group = true 
-            if group_trans.save
+            group_transaction = Transaction.create(group_trans)
+            group_transaction.is_group = true 
+            if group_transaction.save
                 redirect_to groups_path, notice: 'Group Transactions created'
             else 
                 redirect_to new_groups_path, alert: 'All fields are requred'
             end
         end
+    end
+    def destroy
+        trans = Transaction.find_by(id: params[:id])
+        trans.destroy
+        redirect_to transactions_path, alert: 'transaction deleted'
+        
+    end
+    private
+    def group_trans
+        params.permit(:name, :amount, :user_id, :group_id)
     end
 end

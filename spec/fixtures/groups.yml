@@ -1,0 +1,14 @@
+utility:
+  id: 1
+  name: utility
+  user_id: 2
+
+transportation:
+  id: 2
+  name: transportation
+  user_id: 2
+
+renovation:
+  id: 3
+  name: renovation
+  user_id: 1

@@ -7,8 +7,8 @@ class GroupsController < ApplicationController
     @group = Group.new 
   end
   def show 
-    group = Group.find_by(id:params[:id])
-    @current_group_transactions = group.transactions.all
+    @group = Group.find_by(id: params[:id])
+    @current_group_transactions = @group.transactions.all
   end
   def create 
     group = current_user.groups.build(group_params)
@@ -16,7 +16,7 @@ class GroupsController < ApplicationController
     if group.save 
       redirect_to groups_path, notice: 'group created'
       else 
-        redirect_to new_group_path, alert: 'all fields are required'
+        redirect_to new_group_path, alert: 'All fields are required name must be unique'
     end
   end
   private
