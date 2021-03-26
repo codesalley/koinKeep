@@ -1,7 +1,7 @@
 <div class="transacrion-list md:grid md:grid-cols-3 lg:container mx-auto">
     <% transactions.each do |t| %>
     <div class="card flex flex-row p-1 md:p-5 hover:scale-105 transform  duration-700 hover:shadow-xl content-center items-center gap-10  border shadow-md rounded m-5">
-        <%= set_icon(t.group) %>
+        <%= check_icon(t.group) %>
         <div class="info ">
            <p class="font-bold"> <%= t.name.upcase %></p>
            <p >Total: $  <%= t.amount %> USD</p> 

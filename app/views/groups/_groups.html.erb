@@ -7,7 +7,7 @@
   <% @groups.each do |itm| %> <%= link_to group_path(itm) do %>
   <div class="card flex flex-row border p-1 m-5 shadow-md content-center items-center md:p-5 hover:scale-105 transform  duration-700 hover:shadow-xl">
 
-    <%= set_icon(itm) %>
+    <%= check_icon(itm) %>
     <div class="info flex justify-around  gap-2 flex-col">
       <p class="font-bold" ><%= itm.name.upcase %></p>
       <p><%= itm.created_at %></p>
