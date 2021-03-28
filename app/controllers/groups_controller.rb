@@ -18,9 +18,9 @@ class GroupsController < ApplicationController
     group = current_user.groups.build(group_params)
 
     if group.save
-      redirect_to groups_path, notice: 'group created'
+      redirect_to groups_path, notice: 'Group Created'
     else
-      redirect_to new_group_path, alert: 'All fields are required name must be unique'
+      redirect_to new_group_path, alert: 'Error creating group, try again'
     end
   end
 

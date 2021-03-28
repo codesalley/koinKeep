@@ -14,14 +14,14 @@ class TransactionsController < ApplicationController
     if transaction.save
       redirect_to root_path, notice: 'Transaction added'
     else
-      redirect_to new_transaction_path, alert: 'All fields are required'
+      redirect_to new_transaction_path, alert: 'Error adding transaction'
     end
   end
 
   def destroy
     trans = Transaction.find_by(id: params[:id])
     trans.destroy
-    redirect_to root_path, alert: 'Transaction deleted'
+    redirect_to root_path, alert: 'Transaction Deleted'
   end
 
   def external
