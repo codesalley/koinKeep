@@ -1,5 +1,5 @@
 current directory: /Users/salley/microverse/rails/coinkeep/vendor/ruby/3.0.0/gems/ffi-1.15.0/ext/ffi_c
-/Users/salley/.rbenv/versions/3.0.0/bin/ruby -I /Users/salley/.rbenv/versions/3.0.0/lib/ruby/3.0.0 -r ./siteconf20210326-47396-1wr6e4.rb extconf.rb
+/Users/salley/.rbenv/versions/3.0.0/bin/ruby -I /Users/salley/.rbenv/versions/3.0.0/lib/ruby/3.0.0 -r ./siteconf20210327-78768-2srukd.rb extconf.rb
 checking for ffi_prep_closure_loc() in -lffi... no
 checking for ffi_prep_closure_loc() in -llibffi... no
 checking for ffi_prep_closure_loc() in -llibffi-8... no
@@ -123,4 +123,4 @@ compiling Types.c
 compiling Variadic.c
 compiling ffi.c
 linking shared-object ffi_c.bundle
-/usr/bin/install -c -m 0755 ffi_c.bundle ./.gem.20210326-47396-2sv5xv
+/usr/bin/install -c -m 0755 ffi_c.bundle ./.gem.20210327-78768-1kt84t

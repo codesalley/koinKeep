@@ -1,9 +1,14 @@
-<div class="group-main">
-    <h2 class="text-center p-2 text-gray-600 bg-green-100 font-black leading-9" ><%= get_heading(@group) %></h2>
+<div class="group-main bg-gray-100 h-screen">
+    <div class="p-2 text-gray-600 headin heading-color flex flex-row justify-evenly ">
+        <h2 class="text-center text-gray-50 font-bold " >Name: <%= get_heading(@group) %></h2>
+
+        <h2 class=" text-center text-gray-50 font-bold">Total: $ <%= @group_transactions_total %> USD </h2>
+
+    </div>
    
     <%= render_validator(@group) %>
 
     <div class="add-transaction">
-        <%= link_to 'create group transaction',   new_group_transaction_path(id: @group), class: 'animate-bounce p-3 text-gray-500 bottom-5 rounded-3xl right-5 fixed bg-green-100' %>
+        <%= link_to 'create group transaction',   new_group_transaction_path(id: @group), class: 'p-3 text-gray-50 bottom-5 rounded-3xl right-5 fixed add-btn' %>
     </div>
 </div>

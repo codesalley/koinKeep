@@ -1,11 +1,11 @@
-<div class="p-2 text-gray-600 bg-green-100 heading flex flex-row justify-evenly ">
-  <h2 class="text-center font-bold">All Groups</h2>
+<div class="p-2 text-gray-600  heading flex flex-row justify-evenly heading-color ">
+  <h2 class="text-center font-bold text-gray-50 ">All Groups</h2>
 
 </div>
 <div class="all-groups overflow-scroll md:grid md:grid-cols-3 lg:container mx-auto">
 
   <% @groups.each do |itm| %> <%= link_to group_path(itm) do %>
-  <div class="card flex flex-row border p-1 m-5 shadow-md content-center items-center md:p-5 hover:scale-105 transform  duration-700 hover:shadow-xl">
+  <div class="card  flex bg-white flex-row border p-3 m-5 shadow-md content-center items-center md:p-5 hover:scale-105 transform  duration-700 hover:shadow-xl">
 
     <%= check_icon(itm) %>
     <div class="info flex justify-around  gap-2 flex-col">

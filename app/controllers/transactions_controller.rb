@@ -14,7 +14,7 @@ class TransactionsController < ApplicationController
     if transaction.save
       redirect_to root_path, notice: 'Transaction added'
     else
-      redirect_to new_new_transaction, alert: 'All fields are required'
+      redirect_to new_transaction_path, alert: 'All fields are required'
     end
   end
 
