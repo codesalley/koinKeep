@@ -11,7 +11,7 @@ module.exports = {
     })
   ]
 }
-if (process.env.RAILS_ENV === "production" || process.env.RAILS_ENV === "development") {
+if (process.env.RAILS_ENV === "production" ) {
   environment.plugins.push(
     require('@fullhuman/postcss-purgecss')({
       content: [
@@ -26,4 +26,4 @@ if (process.env.RAILS_ENV === "production" || process.env.RAILS_ENV === "develop
   )
 }
 
-module.exports = environment
+
