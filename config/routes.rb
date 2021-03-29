@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   devise_for :users
-  resources :groups 
+  resources :groups
   resources :group_transactions
   resources :transactions
   get 'external_transactions', to: 'transactions#external'
