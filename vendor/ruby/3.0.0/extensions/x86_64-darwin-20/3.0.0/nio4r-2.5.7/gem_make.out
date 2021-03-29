@@ -1,5 +1,5 @@
 current directory: /Users/salley/microverse/rails/coinkeep/vendor/ruby/3.0.0/gems/nio4r-2.5.7/ext/nio4r
-/Users/salley/.rbenv/versions/3.0.0/bin/ruby -I /Users/salley/.rbenv/versions/3.0.0/lib/ruby/3.0.0 -r ./siteconf20210327-78768-wg5oxu.rb extconf.rb
+/Users/salley/.rbenv/versions/3.0.0/bin/ruby -I /Users/salley/.rbenv/versions/3.0.0/lib/ruby/3.0.0 -r ./siteconf20210329-27058-dp5wfz.rb extconf.rb
 checking for unistd.h... yes
 checking for linux/aio_abi.h... no
 checking for linux/io_uring.h... no
@@ -107,4 +107,4 @@ linking shared-object nio4r_ext.bundle
 
 current directory: /Users/salley/microverse/rails/coinkeep/vendor/ruby/3.0.0/gems/nio4r-2.5.7/ext/nio4r
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 nio4r_ext.bundle ./.gem.20210327-78768-riomrb
+/usr/bin/install -c -m 0755 nio4r_ext.bundle ./.gem.20210329-27058-34uhu9

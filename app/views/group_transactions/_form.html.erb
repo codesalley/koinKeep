@@ -2,14 +2,14 @@
     <%= form_with url: group_transactions_path(group_id: params[:id], user_id: current_user.id) do |form|  %>
     <div class="mb-3 flex flex-col">
         <%= form.label :name, "Transaction Name" %>
-        <%= form.text_field :name , class: 'border-2 border-green-200 rounded focus:border-green-500 ' %>
+        <%= form.text_field :name , class: 'border-2 border-blue-200 rounded focus:border-blue-500 ' %>
     </div>
     <div class="mb-3 flex flex-col">
         <%= form.label :amount, "Amount" %>
-        <%= form.number_field :amount , class: 'border-2 border-green-200 rounded focus:border-green-500 ' %>
+        <%= form.number_field :amount , class: 'border-2 border-blue-200 rounded focus:border-blue-500 ' %>
     </div>
     <div class="mb-3 flex flex-col">
-        <%= form.submit 'Add Transaction',  class: 'p-2 rounded bg-green-100 text-gray-500' %>
+        <%= form.submit 'Add Transaction',  class: 'p-2 rounded bg-blue-100 text-gray-500' %>
     </div>
     <% end %>
 </div>
