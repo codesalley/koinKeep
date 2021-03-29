@@ -12,7 +12,7 @@
 
 ## Live Demo
 
-[Heroku](https://koinkeep.herokuapp.app/)
+[Heroku](https://coinkeep.herokuapp.com/)
 
 
 ## Getting Started
