@@ -25,7 +25,7 @@ Rails: 6.1.3
 
 Postgres: >=13.2
 
-yarn
+Yarn: >= 1.22.10
 
 ### Setup
 
