@@ -6,11 +6,12 @@ class GroupsController < ApplicationController
 
   def new
     @group = Group.new
+    
   end
 
   def show
     @group = Group.find_by(id: params[:id])
-    @current_group_transactions = @group.transactions.all
+    @current_group_transactions = @group.transactions.includes(:user, :group).all
     @group_transactions_total =  @current_group_transactions.sum(:amount)
   end
 

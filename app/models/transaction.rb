@@ -7,6 +7,5 @@ class Transaction < ApplicationRecord
   
 
   scope :most_recent, -> { sort_by(&:created_at).reverse }
-  scope :external_transactions, -> { where('is_group = ?', false) }
   
 end
