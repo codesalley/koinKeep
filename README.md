@@ -2,6 +2,8 @@
 
 > KoinKeep, a platform that allows users to manage their transactions in groups and keep watch of what they spend much on. Users can create an account, and add transactions and groups containing transactions. a chart to display stats 
 
+![screenshot](./ss/screenshot.png)
+
 ## Built With
 
 - Ruby v3.0.0
