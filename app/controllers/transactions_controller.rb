@@ -31,6 +31,7 @@ class TransactionsController < ApplicationController
 
   def external
     @external_transactions = current_user.external_transactions.includes(:user, :group).most_recent
+
     @external_total = current_user.external_transactions.sum(:amount)
   end
 

@@ -11,8 +11,8 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find_by(id: params[:id])
-    @current_group_transactions = @group.transactions.includes(:user, :group).all
-    @group_transactions_total =  @current_group_transactions.sum(:amount)
+    @current_group_transactions = @group.transactions.includes(:user, :group).most_recent
+    @group_transactions_total =   @group.transactions.sum(:amount)
   end
 
   def create
