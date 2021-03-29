@@ -2,7 +2,7 @@ class TransactionsController < ApplicationController
   before_action :authenticate_user!
   def new
     @transaction = Transaction.new
-    @groups_arr = Group.all.map {|g| [g.name, g.id]}
+    @groups_arr = Group.all.map { |g| [g.name, g.id] }
     @groups_arr << ['None', nil]
   end
 
@@ -13,9 +13,7 @@ class TransactionsController < ApplicationController
 
   def create
     transaction = current_user.transactions.build(trans_params)
-    if transaction.group_id != nil
-      transaction.is_group = true 
-    end
+    transaction.is_group = true unless transaction.group_id.nil?
     if transaction.save
       redirect_to root_path, notice: 'Transaction added'
     else
