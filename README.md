@@ -17,11 +17,15 @@
 
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
+## Prerequisites
 
 Ruby: 3.0.0
+
 Rails: 6.1.3
+
 Postgres: >=13.2
+
+Yarn: >= 1.22.10
 
 ### Setup
 

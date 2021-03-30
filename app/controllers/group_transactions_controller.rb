@@ -15,14 +15,14 @@ class GroupTransactionsController < ApplicationController
     if group_transaction.save
       redirect_to groups_path, notice: 'Group Transactions created'
     else
-      redirect_to new_groups_path, alert: 'All fields are requred'
+      redirect_to new_group_path, alert: 'Error creating transaction, try again'
     end
   end
 
   def destroy
     trans = Transaction.find_by(id: params[:id])
     trans.destroy
-    redirect_to transactions_path, alert: 'transaction deleted'
+    redirect_to transactions_path, alert: 'Transaction Deleted'
   end
 
   private

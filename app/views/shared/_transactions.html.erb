@@ -1,12 +1,13 @@
 <div class="transacrion-list md:grid md:grid-cols-3 lg:container mx-auto">
     <% transactions.each do |t| %>
-    <div class="card flex flex-row p-1 md:p-5 hover:scale-105 transform  duration-700 hover:shadow-xl content-center items-center gap-10  border shadow-md rounded m-5">
+    <div class="card flex bg-white gap-2 flex-row p-3 md:p-5 hover:scale-105 transform  duration-700 hover:shadow-xl content-center justify-around items-center md:gap-10  border shadow-md rounded m-5">
         <%= check_icon(t.group) %>
-        <div class="info ">
-           <p class="font-bold"> <%= t.name.upcase %></p>
-           <p >Total: $  <%= t.amount %> USD</p> 
-           <p class=" text-xs italic text-gray-400">
-
+        <div class="info flex flex-col gap-4 w-full">
+            <div class="heading flex flex-row w-full justify-between">
+                <p class="font-bold"> <%= t.name.upcase %></p>
+                <p  class="font-medium">$<%= t.amount %> USD</p>
+            </div>
+           <p class=" text-xs italic ">
                <%= date_formatter(t.created_at)  %>
            </p>
         </div>
